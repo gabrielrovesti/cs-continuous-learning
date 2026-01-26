@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Elimina prodotto</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        margin: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Elimina prodotto</h1>
+    <p>Sei sicuro di voler eliminare <strong>{{ product.name }}</strong>?</p>
+    <form method="post">
+      {% csrf_token %}
+      <button type="submit">Conferma eliminazione</button>
+      <a href="/products/">Annulla</a>
+    </form>
+  </body>
+</html>
